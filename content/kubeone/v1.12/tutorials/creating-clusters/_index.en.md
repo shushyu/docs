@@ -73,8 +73,7 @@ Below, you can find a diagram that shows how KubeOne works.
 By default, KubeOne installs the following components:
 
 * Container Runtime: containerd for Kubernetes 1.22+ clusters, otherwise Docker
-* CNI: Canal (based on Calico and Flannel)
-  * Cilium, WeaveNet, and user-provided CNI are supported as an alternative
+* CNI: By default, KubeOne installs Canal (based on Calico and Flannel). KKP supports Canal, Cilium, and a “None” option as primary CNI types; the desired type and version is selected when creating the cluster and can only be changed later through a manual CNI migration.
 * [metrics-server][metrics-server] for collecting and exposing metrics from
   Kubelets
 * [NodeLocal DNSCache][nodelocaldns] for caching DNS queries to improve the
